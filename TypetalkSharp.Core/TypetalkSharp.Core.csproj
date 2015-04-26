@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D52209FF-4300-46CD-A134-C01706122FF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TypetalkSharp.Core</RootNamespace>
+    <AssemblyName>TypetalkSharp.Core</AssemblyName>
+    <DefaultLanguage>ja-JP</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile151</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="API\APIAttachment.cs" />
+    <Compile Include="API\APICommunicationHandler.cs" />
+    <Compile Include="API\APIMessages.cs" />
+    <Compile Include="API\APIProfile.cs" />
+    <Compile Include="API\APINotifications.cs" />
+    <Compile Include="API\APISearch.cs" />
+    <Compile Include="API\APISettings.cs" />
+    <Compile Include="API\APITalks.cs" />
+    <Compile Include="API\APITeams.cs" />
+    <Compile Include="API\APITopics.cs" />
+    <Compile Include="Exceptions\AuthorizationException.cs" />
+    <Compile Include="Json\JsonUtil.cs" />
+    <Compile Include="Model\JsonModels.cs" />
+    <Compile Include="Model\Request\IRequestarameter.cs" />
+    <Compile Include="Model\Request\NewTopic.cs" />
+    <Compile Include="Model\Request\UpdateTopic.cs" />
+    <Compile Include="Model\Response\GetFriendList.cs" />
+    <Compile Include="Model\Response\GetProfile.cs" />
+    <Compile Include="Model\Response\GetTalks.cs" />
+    <Compile Include="Model\Response\UpdateLike.cs" />
+    <Compile Include="Model\Request\MessageRequest.cs" />
+    <Compile Include="Model\Request\NewMessge.cs" />
+    <Compile Include="Model\Response\GetNotifications.cs" />
+    <Compile Include="Model\Response\GetMentions.cs" />
+    <Compile Include="Model\Response\Token.cs" />
+    <Compile Include="Model\Response\GetTopicMembers.cs" />
+    <Compile Include="Model\Response\GetTopicMessages.cs" />
+    <Compile Include="Model\Response\GetTopics.cs" />
+    <Compile Include="Model\Response\UpdateFavorite.cs" />
+    <Compile Include="Model\Response\UpdateNotifications.cs" />
+    <Compile Include="Model\Search.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
