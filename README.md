@@ -2,6 +2,7 @@
 
 TypetalkSharp is a client library of [Typetalk API](https://developer.nulab-inc.com/docs/typetalk) for .NET 4.5.1~  
 
+
 ## Examples
 
 Get Messages with TypetalkSharp
@@ -38,3 +39,14 @@ var typetalkBot = new TypetalkBot("YOUR_TYPETALK_TOKEN");
 var topicId = 0;
 var result = await typetalk.Topics.Messages.Post(topicId, new NewMessage("from TypetalkSharp!"));
 ```
+
+## Getting Started
+TypetalkSharp and TypetalkSharp.bot is available on NuGet
+
+```
+Install-Package TypetalkSharp
+Install-Package TypetalkSharp.Bot
+```
+
+## License
+Licensed under the [MIT License](https://github.com/9bic/TypetalkSharp/blob/master/LICENSE)
